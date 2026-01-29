@@ -66,3 +66,7 @@
     > You will build me a first version of this website using the source files and the process notes as resources. Do not make any changes to the process notes or the source files. Create a folder structure as needed. Initialize an agents.md file with these instructions to make it clear that this is what the website is: a website that is both an illustration of how research is done with AI and a presentation of the results of this particular research. We will be using Antigravity to help analyze the results on the computer and also to build the presentation website, so it will function in two ways for us.
     >
     > Before you do anything else, commit the existing files in here into an initial commit into the git repo. 
+
+- Follow up prompts:
+    > refactor the site to keep all the pages and content that are displayed on the website in a pages folder with the conent being in easily editable markdown files.
+

@@ -12,11 +12,15 @@ We are using a modern tech stack to build and host this site:
 - **AI Assistant**: [Antigravity](https://github.com/google-deepmind/antigravity) (used for both analyzing research results and building this presentation website).
 - **Hosting**: [Cloudflare Pages](https://pages.cloudflare.com/)
 - **Source Control**: [GitHub](https://github.com/)
+- **Markdown Parser**: [Marked](https://marked.js.org/) (used to dynamically render site content from Markdown files).
 
-## Antigravity's Role
-Antigravity functions in two ways for this project:
-- **Analysis**: Helping to process and analyze the localized research data.
-- **Development**: Acting as the primary coding agent to architect and build this website.
+## Content Structure
+To make the website easily maintainable, all page content is stored in the `public/pages/` directory as Markdown files:
+- `home.md`: Content for the hero and introduction.
+- `results.md`: Detailed research findings.
+- `scenarios.md`: Clinical vignettes with metadata for search and filtering.
+- `process.md`: Documentation of the research methodology.
+- `tools.md`: List of AI tools utilized in this project.
 
 ## Instructions
 - Use the content in `sourcefiles/` and `processnotes/` as the primary resources for the website content.

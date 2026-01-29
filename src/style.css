@@ -40,7 +40,9 @@ body {
   background: var(--bg);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
 }
@@ -428,6 +430,58 @@ nav ul a:hover {
   color: #9ca3af;
 }
 
+/* Markdown Content Styles */
+.markdown-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.markdown-content h2 {
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.bg-dark .markdown-content h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.markdown-content h3 {
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
+  color: var(--primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.markdown-content p {
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+}
+
+.bg-dark .markdown-content p {
+  color: #9ca3af;
+}
+
+.markdown-content ul {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.5rem;
+  background: rgba(0, 102, 204, 0.05);
+  margin-bottom: 2rem;
+  font-style: italic;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
 /* Footer */
 footer {
   padding: 4rem 0;
@@ -459,8 +513,21 @@ footer .container {
     padding: 8rem 2rem;
     text-align: center;
   }
-  .hero h1 { font-size: 3rem; }
-  .hero-actions { justify-content: center; }
-  .process-timeline { flex-direction: column; gap: 3rem; }
-  .process-timeline::before { display: none; }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .process-timeline {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .process-timeline::before {
+    display: none;
+  }
 }
