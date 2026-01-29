@@ -430,6 +430,30 @@ nav ul a:hover {
   color: #9ca3af;
 }
 
+.process-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--primary);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+.process-illustration {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
 /* Markdown Content Styles */
 .markdown-content h1 {
   font-size: 2.5rem;
