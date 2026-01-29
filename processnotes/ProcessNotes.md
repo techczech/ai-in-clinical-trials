@@ -35,7 +35,11 @@
 - Used Pro subscription
 - Link to shared notebook https://notebooklm.google.com/notebook/5437f419-a79b-4088-b808-84ab44e48b01
 - Used Deep Research
-- Files in 
+- Files in sourcefiles
+    - CSV made with prompt: "Create a table of dates of report and the finding with a column of positive and negative lessons learned."
+    - Mindmap image generated in Studio
+    - Video overview without custom prompt
+    - Briefing document without custom prompt
 
 ## Other source materials
 ### ChatGPT generated list of scenarios
