@@ -70,3 +70,4 @@
 - Follow up prompts:
     > refactor the site to keep all the pages and content that are displayed on the website in a pages folder with the conent being in easily editable markdown files.
 
+    > change process page to reflect the process actually described - do not invent categories - just describe what ahppened - incl. prompt and links mentioned and what they generated and how they link to the website - be detailed and precise  - ask me questions if you are not sure
