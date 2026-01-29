@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Clinical Trials | Research & Process</title>
+    <meta name="description" content="A research exhibit exploring the use of generative AI in clinical trials, built with Antigravity and hosted on Cloudflare.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <div class="logo">AI-Trials.ox</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#scenarios">Scenarios</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <span class="badge">Oxford 2026 Research Project</span>
+                    <h1>Generative AI in <span class="italic">Clinical Trials</span></h1>
+                    <p class="lead">Exploring how LLMs and agentic AI are transforming trial design, recruitment, and delivery at Oxford's Surgical Intervention Trials Unit (SITU).</p>
+                    <div class="hero-actions">
+                        <a href="#results" class="btn btn-primary">Explore Results</a>
+                        <a href="#process" class="btn btn-secondary">See the Process</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="glass-card">
+                        <h3>Antigravity Powered</h3>
+                        <p>This entire site and research analysis was built using agentic AI.</p>
+                        <div class="stack-icons">
+                            <span title="Antigravity">AG</span>
+                            <span title="Cloudflare">CF</span>
+                            <span title="GitHub">GH</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Summary -->
+            <section id="results" class="section">
+                <div class="container">
+                    <h2 class="section-title">Research Findings</h2>
+                    <div class="summary-grid" id="summary-grid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browsable Scenarios -->
+            <section id="scenarios" class="section bg-alt">
+                <div class="container">
+                    <h2 class="section-title">Clinical Scenarios & Roles</h2>
+                    <p class="section-subtitle">Browse how various roles interact with AI across different trial phases.</p>
+                    
+                    <div class="search-filter">
+                        <input type="text" id="scenario-search" placeholder="Search scenarios, roles, or tasks...">
+                        <div class="filter-chips" id="role-filters">
+                            <button class="filter-chip active" data-role="all">All Roles</button>
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <div class="scenarios-grid" id="scenarios-grid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Process -->
+            <section id="process" class="section">
+                <div class="container">
+                    <h2 class="section-title">Behind the Science</h2>
+                    <div class="process-timeline">
+                        <div class="process-step">
+                            <h3>01. Data Gathering</h3>
+                            <p>Querying Consensus, Elicit, and ChatGPT Deep Research for frontier insights.</p>
+                        </div>
+                        <div class="process-step">
+                            <h3>02. Synthesis</h3>
+                            <p>Using NotebookLM to ground findings in Oxford-specific constraints and SOPs.</p>
+                        </div>
+                        <div class="process-step">
+                            <h3>03. Exhibit Build</h3>
+                            <p>Architecting this presentation using Antigravity with Gemini 3 Flash.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-notes-link">
+                        <div class="card">
+                            <h3>Process Notes</h3>
+                            <p>Read the full chronological log of how this research was conducted.</p>
+                            <a href="https://github.com/dominiklukes/ai-in-clinical-trials/blob/main/processnotes/ProcessNotes.md" target="_blank" class="text-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools Used -->
+            <section id="tools" class="section bg-dark">
+                <div class="container">
+                    <h2 class="section-title">The AI Toolkit</h2>
+                    <div class="tools-grid" id="tools-grid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Dominik Lukeš. Built with <strong>Antigravity</strong>. Hosted on <strong>Cloudflare</strong>.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/dominiklukes/ai-in-clinical-trials">GitHub Source</a>
+                    <a href="/processnotes/ProcessNotes.md">Process Notes</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
