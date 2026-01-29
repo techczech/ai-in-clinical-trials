@@ -57,6 +57,11 @@ async function loadPageContent() {
         renderToolTags(tools);
         renderTools(tools);
 
+        // Load About
+        const aboutRes = await fetch('/pages/about.md');
+        const aboutMd = await aboutRes.text();
+        document.getElementById('about-content').innerHTML = marked.parse(aboutMd);
+
     } catch (error) {
         console.error('Error loading markdown pages:', error);
     }
