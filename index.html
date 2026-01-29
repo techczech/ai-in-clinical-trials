@@ -110,7 +110,18 @@
             <!-- Tools Used -->
             <section id="tools" class="section bg-dark">
                 <div class="container">
-                    <div id="tools-grid">
+                    <div id="tools-intro">
+                        <!-- Intro text computed from tools.md -->
+                    </div>
+
+                    <div class="search-filter">
+                        <input type="text" id="tool-search" placeholder="Search tools, tags, or descriptions...">
+                        <div class="filter-chips" id="tool-tags">
+                            <button class="filter-chip active" data-tag="all">All Tools</button>
+                        </div>
+                    </div>
+
+                    <div id="tools-grid" class="tools-grid">
                         <!-- Rendered by JS from tools.md -->
                     </div>
                 </div>
@@ -120,7 +131,8 @@
         <footer>
             <div class="container">
                 <p>&copy; 2026 Dominik Lukeš. Built with <strong>Antigravity</strong>. Hosted on
-                    <strong>Cloudflare</strong>.</p>
+                    <strong>Cloudflare</strong>.
+                </p>
                 <div class="footer-links">
                     <a href="https://github.com/dominiklukes/ai-in-clinical-trials">GitHub Source</a>
                     <a href="/processnotes/ProcessNotes.md">Process Notes</a>
