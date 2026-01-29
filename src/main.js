@@ -1,26 +1,91 @@
-import { researchData } from './data.js';
+import { marked } from 'marked';
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderSummary();
-    renderRoleFilters();
-    renderScenarios(researchData.scenarios);
-    renderTools();
+// Define roles for the filter (keeping this structured as it's UI config)
+export const roles = [
+    { id: "trial-manager", name: "Trial Manager" },
+    { id: "pi", name: "Principal Investigator (CI/PI)" },
+    { id: "physio", name: "Research Physiotherapist" },
+    { id: "data-manager", name: "Data Manager" },
+    { id: "trial-assistant", name: "Trial Assistant" },
+    { id: "dphil", name: "DPhil Student" }
+];
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadPageContent();
     setupSearch();
+    renderRoleFilters();
 });
 
-function renderSummary() {
-    const grid = document.getElementById('summary-grid');
-    grid.innerHTML = researchData.summary.keyPoints.map(point => `
-        <div class="summary-card">
-            <h3>${point.area}</h3>
-            <p>${point.details}</p>
+async function loadPageContent() {
+    try {
+        // Load Home
+        const homeRes = await fetch('/pages/home.md');
+        const homeMd = await homeRes.text();
+        document.querySelector('.hero-content h1').innerHTML = 'Generative AI in <span class="italic">Clinical Trials</span>';
+        document.querySelector('.hero-content .lead').innerHTML = marked.parse(homeMd.split('\n').filter(l => !l.startsWith('#')).join('\n'));
+
+        // Load Results
+        const resultsRes = await fetch('/pages/results.md');
+        const resultsMd = await resultsRes.text();
+        const resultsHTML = marked.parse(resultsMd);
+        document.getElementById('summary-grid').innerHTML = resultsHTML;
+        document.getElementById('summary-grid').classList.remove('summary-grid'); // Change layout to standard flow for MD
+        document.getElementById('summary-grid').classList.add('markdown-content');
+
+        // Load Scenarios
+        const scenariosRes = await fetch('/pages/scenarios.md');
+        const scenariosMd = await scenariosRes.text();
+        window.allScenarios = parseScenarios(scenariosMd);
+        renderScenarios(window.allScenarios);
+
+        // Load Process & Tools
+        const processRes = await fetch('/pages/process.md');
+        const processMd = await processRes.text();
+        document.getElementById('process-content').innerHTML = marked.parse(processMd);
+
+        const toolsRes = await fetch('/pages/tools.md');
+        const toolsMd = await toolsRes.text();
+        document.getElementById('tools-grid').innerHTML = marked.parse(toolsMd);
+        document.getElementById('tools-grid').classList.remove('tools-grid');
+        document.getElementById('tools-grid').classList.add('markdown-content');
+
+    } catch (error) {
+        console.error('Error loading markdown pages:', error);
+    }
+}
+
+function parseScenarios(md) {
+    const blocks = md.split('---').filter(b => b.trim().length > 0 && b.includes('title:'));
+    return blocks.map(block => {
+        const lines = block.trim().split('\n');
+        const data = {};
+        lines.forEach(line => {
+            const [key, ...value] = line.split(':');
+            if (key && value.length > 0) {
+                data[key.trim()] = value.join(':').trim();
+            }
+        });
+        if (data.roles) {
+            data.roles = data.roles.split(',').map(r => r.trim());
+        }
+        return data;
+    });
+}
+
+function renderScenarios(scenarios) {
+    const grid = document.getElementById('scenarios-grid');
+    grid.innerHTML = scenarios.map(s => `
+        <div class="scenario-card">
+            <span class="cat">${s.category || 'Clinical'}</span>
+            <h3>${s.title}</h3>
+            <p>${s.vignette}</p>
         </div>
     `).join('');
 }
 
 function renderRoleFilters() {
     const filterContainer = document.getElementById('role-filters');
-    const roleChips = researchData.roles.map(role => `
+    const roleChips = roles.map(role => `
         <button class="filter-chip" data-role="${role.id}">${role.name}</button>
     `).join('');
     filterContainer.innerHTML += roleChips;
@@ -36,28 +101,6 @@ function renderRoleFilters() {
     });
 }
 
-function renderScenarios(scenarios) {
-    const grid = document.getElementById('scenarios-grid');
-    grid.innerHTML = scenarios.map(s => `
-        <div class="scenario-card" data-category="${s.category}">
-            <span class="cat">${s.category}</span>
-            <h3>${s.title}</h3>
-            <p>${s.vignette}</p>
-        </div>
-    `).join('');
-}
-
-function renderTools() {
-    const grid = document.getElementById('tools-grid');
-    grid.innerHTML = researchData.tools.map(tool => `
-        <div class="tool-card">
-            <h3>${tool.name}</h3>
-            <p>${tool.role}</p>
-            <a href="${tool.link}" target="_blank" class="text-link" style="color: var(--accent); font-size: 0.8rem; text-decoration: none;">Link →</a>
-        </div>
-    `).join('');
-}
-
 function setupSearch() {
     const searchInput = document.getElementById('scenario-search');
     searchInput.addEventListener('input', (e) => {
@@ -68,20 +111,18 @@ function setupSearch() {
 }
 
 function filterScenarios(role, query) {
-    let filtered = researchData.scenarios;
+    let filtered = window.allScenarios || [];
 
-    // Filter by role
     if (role !== 'all') {
         filtered = filtered.filter(s => s.roles && s.roles.includes(role));
     }
 
-    // Filter by search query
     if (query) {
         const q = query.toLowerCase();
         filtered = filtered.filter(s =>
             s.title.toLowerCase().includes(q) ||
             s.vignette.toLowerCase().includes(q) ||
-            s.category.toLowerCase().includes(q)
+            (s.category && s.category.toLowerCase().includes(q))
         );
     }
 
