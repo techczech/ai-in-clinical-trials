@@ -1,0 +1,203 @@
+[
+    {
+        "id": 1,
+        "filename": "Consensus report - copied from Consensus.md",
+        "summary_file": "summaries/01_consensus_report.md",
+        "type": "markdown",
+        "size_bytes": 8600,
+        "generator_tool": "Consensus (AI-powered research search engine)",
+        "key_theme": "High Potential, Early Evidence, Significant Caveats",
+        "description": "Research synthesis on GenAI in clinical trials. Covers trial design, recruitment, simulation, and risk monitoring. Highlights utility vs. limitations matrix.",
+        "key_topics": [
+            "Trial design and administration",
+            "Recruitment and eligibility",
+            "Simulation and digital twins",
+            "Risk monitoring",
+            "Regulatory limitations",
+            "Hallucinations"
+        ],
+        "key_figures": [
+            "~87% patient-trial matching accuracy",
+            ">90% recall in screening",
+            "~40% reduction in screening time"
+        ],
+        "analysis_status": "Fully analyzed"
+    },
+    {
+        "id": 2,
+        "filename": "Elicit - Surveying Large Language Models in Clinical Trials - Report.md",
+        "summary_file": "summaries/02_elicit_report.md",
+        "type": "markdown",
+        "size_bytes": 24475,
+        "generator_tool": "Elicit (AI research assistant)",
+        "key_theme": "Role-Based AI Implementation Scenarios for Clinical Trial Teams",
+        "description": "SITU/NDORMS Oxford scenario bank for AI training. Contains 17 detailed vignettes organized by trial phase and role (Manager, PI, Physio, Data Manager, etc.).",
+        "key_topics": [
+            "Role-based workflows",
+            "Scenario bank (17 vignettes)",
+            "AI Tool Patterns (ChatGPT, NotebookLM, Coding tools)",
+            "Governance and safe-use patterns",
+            "Oxford 2026 policy baselines"
+        ],
+        "key_figures": null,
+        "analysis_status": "Fully analyzed"
+    },
+    {
+        "id": 3,
+        "filename": "NotebookLM Briefing Document - Generative AI in the Research Enterprise_ A Synthesis of Applications, Opportunities, and Imperatives.md",
+        "summary_file": "summaries/03_notebooklm_briefing_document.md",
+        "type": "markdown",
+        "size_bytes": 16047,
+        "generator_tool": "NotebookLM",
+        "key_theme": "Synthesis of Applications, Opportunities, and Imperatives",
+        "description": "Executive briefing covering the research lifecycle, key benefits, critical challenges, and governance frameworks. Includes the 'Researcher's Three Duties' (Cornell) and funder policy matrix.",
+        "key_topics": [
+            "Research Lifecycle applications",
+            "Synthetic Control Arms",
+            "SAS-to-R conversion (Merck case study)",
+            "Researcher responsibilities (Discretion, Verification, Disclosure)",
+            "Funder/Regulatory policies",
+            "Generational divide in adoption"
+        ],
+        "key_figures": [
+            "66% reduction in manual coding effort",
+            "18-month acceleration in drug approval (Roche)",
+            "78% of SAS templates converted",
+            "96% synthetic data quality scores"
+        ],
+        "analysis_status": "Fully analyzed"
+    },
+    {
+        "id": 4,
+        "filename": "NotebookLM - Reports and Findings on GenAI Implementation Lessons Learned - Table 1.csv",
+        "summary_file": "summaries/04_notebooklm_lessons_learned_table.md",
+        "type": "csv",
+        "size_bytes": 10366,
+        "generator_tool": "NotebookLM",
+        "key_theme": "Chronological Findings with Positive and Negative Lessons",
+        "description": "Structured table of 23 findings on GenAI implementation (2024-2025). Each entry includes date, finding, positive lessons, negative lessons, and source citations.",
+        "key_topics": [
+            "PROMs reliability (ICC > 0.90)",
+            "Faculty adoption patterns",
+            "Clinical event extraction (F1=0.82)",
+            "Consent form simplification",
+            "Hallucination rates (21-50%)",
+            "Equity issues in trial matching"
+        ],
+        "key_figures": [
+            "21-50% hallucination rates",
+            "42% hallucinations in ED discharge summaries",
+            "10-point accuracy drop for underrepresented populations",
+            "0.001% misinformation increases harmful completions by 4.8%"
+        ],
+        "analysis_status": "Fully analyzed"
+    },
+    {
+        "id": 5,
+        "filename": "ChatGPT Deep Research - Frontier LLMs in Clinical Trials (2025–2026)_ Real-World Case Studies and Outcomes.md",
+        "summary_file": "summaries/05_chatgpt_deep_research_report.md",
+        "type": "markdown",
+        "size_bytes": 1819867,
+        "generator_tool": "ChatGPT Deep Research",
+        "key_theme": "Real-World Case Studies and Outcomes",
+        "description": "Comprehensive report on frontier LLMs (GPT-4/5, Gemini) in clinical trials 2025-2026. Covers trial reporting, consent forms, patient matching (TrialGPT), and MRCT best practice guidelines.",
+        "key_topics": [
+            "Trial reporting and documentation",
+            "Informed consent development",
+            "NIH TrialGPT patient matching",
+            "Penda Health AI Copilot RCT",
+            "MRCT best practice guidelines"
+        ],
+        "key_figures": [
+            "50%+ time savings reported",
+            "Weeks-to-months reduction in reporting cycles"
+        ],
+        "analysis_status": "Partially analyzed (text extracted)"
+    },
+    {
+        "id": 6,
+        "filename": "Elicit - Surveying Large Language Models in Clinical Trials - Report - converted.md",
+        "summary_file": "summaries/06_elicit_docx_report.md",
+        "type": "markdown",
+        "size_bytes": 27906,
+        "generator_tool": "Elicit (AI research assistant)",
+        "key_theme": "Evidence Synthesis with Academic References",
+        "description": "Systematic evidence review on LLMs in clinical trials. Covers model selection, performance metrics, and practical recommendations (RAG, human-in-the-loop, domain-specific models).",
+        "key_topics": [
+            "Model performance hierarchy (GPT-4 > GPT-3.5)",
+            "Domain-specific models (OncoLLM, Fu-LLM)",
+            "Fine-tuning impact",
+            "RAG for knowledge-intensive tasks",
+            "Human-in-the-loop standard practice"
+        ],
+        "key_figures": [
+            "Fine-tuning improved sensitivity 0.036 → 0.539",
+            "AUC 0.82 for proportional eligibility",
+            "90% reduction in physician review with HITL",
+            "40 percentage point improvement with RAG"
+        ],
+        "analysis_status": "Partially analyzed (text extracted)"
+    },
+    {
+        "id": 7,
+        "filename": "NotebookLM Infographic - no custom prompt.png",
+        "summary_file": "summaries/07_notebooklm_infographic.md",
+        "type": "png",
+        "size_bytes": 6316289,
+        "generator_tool": "NotebookLM",
+        "key_theme": "Promise vs. Perils of GenAI",
+        "description": "High-resolution infographic presenting 'The Promise' (left column) vs. 'The Perils' (right column) of GenAI in research. Includes generational divide visualization.",
+        "key_topics": [
+            "Accelerating timelines",
+            "Synthetic data for rare diseases",
+            "Scale and efficiency gains",
+            "Privacy and security risks",
+            "Hallucinations",
+            "Bias and inequity"
+        ],
+        "key_figures": [
+            "66% reduction in manual code effort",
+            "18 months drug approval acceleration",
+            "3x virtual patient population expansion"
+        ],
+        "analysis_status": "Image analyzed"
+    },
+    {
+        "id": 8,
+        "filename": "NotebookLM Mind Map on LLM in Clinical Trials.png",
+        "summary_file": "summaries/08_notebooklm_mind_map.md",
+        "type": "png",
+        "size_bytes": 1792781,
+        "generator_tool": "NotebookLM",
+        "key_theme": "Hierarchical Taxonomy of LLM Applications",
+        "description": "Mind map visualizing complete taxonomy of LLM applications. Central node 'LLM in Clinical Trials' branches to Clinical Trial Design, Trial Conduct, Statistical Programming, Challenges, and Mitigation.",
+        "key_topics": [
+            "Protocol Development",
+            "Eligibility Criteria",
+            "Data Management",
+            "Safety Monitoring",
+            "SAS/R Code Generation",
+            "Challenges (ethical, legal, technical)",
+            "Mitigation Strategies"
+        ],
+        "key_figures": null,
+        "analysis_status": "Image analyzed"
+    },
+    {
+        "id": 9,
+        "filename": "AI_in_Medicine - video overview generated by NotebookLM.mp4",
+        "summary_file": "summaries/09_ai_in_medicine_video.md",
+        "type": "mp4",
+        "size_bytes": 47807436,
+        "generator_tool": "NotebookLM",
+        "key_theme": "Video Overview of AI in Medicine",
+        "description": "Video overview generated by NotebookLM covering AI in Medicine. Binary format - content inferred from filename and context.",
+        "key_topics": [
+            "AI/LLMs in healthcare",
+            "Clinical trial applications",
+            "Benefits and risks overview"
+        ],
+        "key_figures": null,
+        "analysis_status": "Not analyzed (binary video)"
+    }
+]
